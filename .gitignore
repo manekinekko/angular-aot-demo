@@ -1,0 +1,5 @@
+node_modules
+dist
+app/*.ngfactory.ts
+.DS_Store
+npm-debug.log
