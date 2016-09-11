@@ -1,0 +1,14 @@
+<section>
+  <md-card>
+    <md-card-title>Avis Global</md-card-title>
+    <md-card-content>
+      <md-grid-list cols="6" rows="16" rowWidth="50px" rowHeight="50px">
+        <md-grid-tile #dom *ngFor="let tile of tiles; let i=index" [colspan]="tile.cols" [rowspan]="tile.rows"
+                      [style.background]="tile.color">
+          <md-button (click)="alert(i, dom)">{{tile.text}}</md-button>
+        </md-grid-tile>
+      </md-grid-list>
+    </md-card-content>
+    <md-card-actions align="end"></md-card-actions>
+  </md-card>
+</section>

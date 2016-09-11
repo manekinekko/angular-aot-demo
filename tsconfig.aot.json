@@ -18,7 +18,8 @@
     "outDir": "./dist/unbundled",
     "rootDir": "./app",
     "types": [
-      "node"
+      "node",
+      "firebase"
     ]
   },
   "angularCompilerOptions": {

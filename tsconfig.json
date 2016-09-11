@@ -10,7 +10,9 @@
     "sourceMap": true,
     "types": [
       "es6-shim",
-      "node"
+      "node",
+      "firebase",
+      "hammerjs"
     ]
   },
   "files": [],

@@ -1,1 +1,38 @@
-<h1>{{ hello }}!</h1>
+<md-sidenav-layout fullscreen>
+  <md-sidenav #sidenav>
+    <md-toolbar color="primary">
+      Liste des Candidats
+    </md-toolbar>
+    <md-nav-list>
+      <candidate-list (click)="sidenav.close()"></candidate-list>
+      <a md-list-item (click)="onLogout()" *ngIf="user">
+        <img width="80" src="../icons/google-icon.png" alt="Google icon"/>
+        <b>Logout</b>
+      </a>
+    </md-nav-list>
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button md-icon-button [disabled]="!user" (click)="sidenav.open()">
+      <md-icon>☰</md-icon>
+    </button>
+    PlayOffs
+    <span class="flex"></span>
+    <img style="border-radius: 50%;width: 50px;height: 50px;" *ngIf="user" [src]="user?.auth?.photoURL"/>
+  </md-toolbar>
+
+  <router-outlet></router-outlet>
+
+  <google-signing *ngIf="!(user)" (onLogin)="onLogin($event)" ></google-signing>
+
+  <div *ngIf="user">
+
+    <card-list title="Niveau Global" [questions]="gLevels"></card-list>
+
+    <card-list title="Niveau Technique" [questions]="tLevels"></card-list>
+
+    <card-grid></card-grid>
+
+  </div>
+
+</md-sidenav-layout>

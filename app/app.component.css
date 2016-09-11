@@ -1,0 +1,7 @@
+md-progress-circle,
+md-spinner {
+  display: inline-block;
+}
+.flex{
+  flex: 1 1 auto;
+}
