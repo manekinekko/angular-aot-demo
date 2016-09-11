@@ -1,0 +1,70 @@
+<md-card class="md-whiteframe-2dp">
+
+  <md-card-title>
+    <span *ngIf="isUpdateMode" ></span>
+    <span *ngIf="!isUpdateMode">Create new person</span>
+  </md-card-title>
+
+  <md-card-content>
+    <form novalidate [formGroup]="form">
+
+      <p *ngIf="isUpdateMode">
+        <md-input style="width:100%" placeholder="ID (disabled)" disabled  name="id" formControlName="id"></md-input>
+      </p>
+
+      <table style="width: 100%" cellspacing="0">
+        <tr>
+          <td>
+            <p>
+
+              <md-input placeholder="First name" formControlName="firstname" minlength="2" required name="firstname" ></md-input>
+
+            </p>
+
+            <p>
+
+              <md-input placeholder="Last Name" formControlName="lastname" required name="lastname"></md-input>
+
+            </p>
+
+          </td>
+          <td class="align-right">
+            <img width="100" src=""/>
+            <input type="hidden" formControlName="photo" name="photo">
+          </td>
+        </tr>
+      </table>
+
+      <p>
+        <md-input placeholder="Email" style="width:100%" formControlName="email" name="email" type="email"></md-input>
+
+      </p>
+
+      <p>
+        <md-input placeholder="Address" style="width:100%" formControlName="street" name="street"></md-input>
+      </p>
+
+      <p>
+        <md-input placeholder="City" formControlName="city" name="city"></md-input>
+        <md-input placeholder="Postal Code" formControlName="postalCode" name="postalCode"></md-input>
+      </p>
+
+      <p>
+        <md-input placeholder="Phone (ex: 0612345678)" style="width:100%" formControlName="phone" name="phone"></md-input>
+
+      </p>
+
+      <p>
+        <md-checkbox name="isManager" formControlName="isManager">Manager</md-checkbox>
+      </p>
+
+    </form>
+  </md-card-content>
+
+
+  <md-card-actions align="end">
+    <button md-button type="button" (click)="cancel()">Cancel</button>
+    <button md-button color="primary" type="submit" (click)="submit(form.value)" [disabled]="!form.valid">Save</button>
+  </md-card-actions>
+
+</md-card>

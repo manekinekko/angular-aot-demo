@@ -1,0 +1,46 @@
+md-toolbar.extend-toolbar {
+  background-color: #0168AB;
+  background-image: url('/assets/images/bg_right.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  top: 0px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  width: 100%;
+  z-index: 1;
+  color: white;
+  margin-bottom: 10px;
+}
+
+md-toolbar .flex {
+  flex: 1 1 auto;
+}
+
+md-toolbar a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  margin: 0px 10px 0px 10px;
+  border-bottom: 2px solid transparent;
+  font-size: 1.1em;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+}
+
+md-toolbar a:not(.active):hover {
+  border-bottom: 2px solid white;
+}
+
+md-toolbar a img {
+  height: 100%;
+  margin-left: -60px;
+}
+
+md-toolbar-row:nth-child(1) {
+  margin-bottom: 66px;
+}
+md-toolbar-row:nth-child(2) {
+  padding-left: 30px;
+  text-align: center;
+  height: 56px;
+  margin-top: 56px;
+}

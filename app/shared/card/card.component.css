@@ -1,0 +1,140 @@
+@media (min-width: 768px) {
+  :host(.wide) md-card,
+  :host(.wide) md-list-item{
+    width: 600px;
+  }
+}
+
+md-card,
+md-list-item {
+  color: rgba(0,0,0,0.87);
+  background-color: white;
+  margin: 10px;
+  width: 360px;
+}
+
+md-card:hover {
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2),
+              0 24px 38px 3px rgba(0,0,0,.14),
+              0 9px 46px 8px rgba(0,0,0,.12);
+}
+
+md-list-item {
+  height: 22px;
+  padding: 0;
+  margin-left: -12px;
+  font-size: 14px;
+}
+
+md-card-title {
+  margin-bottom: 0;
+}
+
+md-card-title span {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+md-card-subtitle.contact-info {
+  margin-top: -7px;
+  height: 20px;
+}
+
+md-card-title-group {
+  margin-bottom: 20px;
+}
+
+.contact-info md-icon + a {
+  top: -8px;
+  position: relative;
+  height: 18px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.buttons-info {
+  float: right;
+  margin-top: -50px;
+}
+
+@media (max-width: 412px) {
+  .buttons-info {
+    margin-top: -34px;
+  }
+}
+
+.buttons-info [md-button] {
+  min-width: 0px;
+  padding: 2px;
+  height: 40px;
+}
+
+md-icon {
+  color: rgba(0,0,0,0.54);
+  margin: 4px;
+}
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+md-card-actions button[md-raised-button] {
+  margin: 5px;
+}
+
+.hl {
+  background-color: orange;
+  color: white;
+}
+
+.skills {
+  padding: 10px;
+  background-color: #FAFAFA;
+}
+
+a.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 188px;
+}
+
+@media (max-width: 600px) {
+  a.truncate {
+    width: 170px;
+  }
+}
+
+@media (max-width: 768px) {
+  a.truncate {
+    width: 190px;
+  }
+}
+
+.md-whiteframe-2dp {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,.2),
+              0 2px 2px 0 rgba(0,0,0,.14),
+              0 3px 1px -2px rgba(0,0,0,.12);
+}
+
+img {
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+@media (max-width: 412px) {
+  img {
+    margin-right: 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    margin-right: 5px;
+  }
+}

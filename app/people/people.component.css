@@ -1,0 +1,66 @@
+h1 {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  padding-bottom: 100px;
+}
+
+.dialog-modal {
+  top: 0;
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-basis: auto;
+  visibility: hidden;
+  color: white;
+}
+.dialog-modal.active {
+  visibility: visible;
+}
+
+md-list-item {
+  border: 1px solid rgba(0,0,0,0.1);
+  color: rgba(0,0,0,0.87);
+  background-color: white;
+  margin-left: -12px;
+  font-size: 14px;
+  display: block;
+  margin: 3px 0;
+  padding: 0;
+  height: 70px;
+  width: 400px;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+md-list-item:hover {
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,.14),
+              0 9px 46px 8px rgba(0,0,0,.12);
+}
+
+.buttons-fab {
+  display: block;
+  height: 170px;
+  width: 90px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.buttons-fab button {
+  transition: bottom 0.2s;
+}
+
+.buttons-fab:hover .button-add {
+  bottom: 90px;
+}

@@ -1,0 +1,52 @@
+<md-card class="md-whiteframe-2dp">
+   <md-card-title-group>
+      <img md-card-md-image src="{{ person.photo }}">
+      <md-card-title>
+        <a [routerLink]="['/person', person.id]">
+          <span>{{ person.firstname }} {{ person.lastname }}</span>
+        </a>
+      </md-card-title>
+      <md-card-subtitle>{{ person.entity }}</md-card-subtitle>
+      <md-card-subtitle class="contact-info">
+        <md-icon svgSrc="images/icon-mail.svg"></md-icon>
+        <a href="mailto:{{ person.firstname }} {{ person.lastname }}&lt;{{ person.email }}&gt;" title="Send an email to {{ person.firstname }} {{ person.lastname }}" class="truncate">{{ person.email }}</a>
+      </md-card-subtitle>
+      <md-card-subtitle class="contact-info">
+        <md-icon svgSrc="images/icon-phone.svg"></md-icon>
+        <a href="tel:{{ person.phone }}" title="Call {{ person.firstname }}">{{ person.phone }}</a>
+      </md-card-subtitle>
+
+   </md-card-title-group>
+   <md-card-content>
+     <div class="contact-info">
+       Manager&nbsp;:&nbsp;
+      <a [routerLink]="['/person', person.managerId]">{{ person.manager | na }}</a>
+     </div>
+     <div class="contact-info">
+       Location&nbsp;:&nbsp;<a href="http://www.sfeir.com/contact/">SFEIR</a>
+     </div>
+     <div class="contact-info">
+       Birth Date&nbsp;:&nbsp;<span>{{ person.birthDate | date:'dd/m/y' }}</span>
+     </div>
+     <div class="buttons-info">
+       <a md-button title="Locate" href="#/locator/1">
+         <md-icon svgSrc="images/icon-maps.svg"></md-icon>
+       </a>
+       <a md-button title="Edit" [routerLink]="['/edit', person.id]">
+         <md-icon svgSrc="images/icon-edit.svg"></md-icon>
+       </a>
+       <button md-button title="Delete" (click)="delete(person)">
+         <md-icon svgSrc="images/icon-delete.svg"></md-icon>
+       </button>
+     </div>
+   </md-card-content>
+
+   <md-card-actions class="skills" *ngIf="isExpanded">
+     <h3 class="style-scope people-card">Skills</h3>
+
+     <button md-raised-button *ngFor="let skill of person.skills">
+       {{ skill }}
+     </button>
+
+   </md-card-actions>
+</md-card>
