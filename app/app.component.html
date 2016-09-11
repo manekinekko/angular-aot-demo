@@ -1,1 +1,14 @@
-<h1>{{ hello }}!</h1>
+<section>
+
+  <ul>
+    <li *ngFor="let item of list; let i=index" (click)="click(item)">
+      <app-avatar [ngClass]="{ 'flip': item.v == 's1' }"  (click)="easter(i)"></app-avatar>
+    </li>
+  </ul>
+
+  <span *ngIf="!game" (click)="start()">Whack A Shai</span>
+  <span *ngIf="game"  (click)="pause()" [class.warning]="score < 0">{{ score }}XP</span>
+
+</section>
+
+<app-avatar></app-avatar>

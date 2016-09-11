@@ -1,0 +1,94 @@
+:host {
+
+}
+
+section {
+  max-width: 700px;
+  text-align: center;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+  height: auto;
+  border-radius: 44px;
+  padding: 14px;
+  border: 1px solid rgb(255, 255, 255);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0px 0px 11px rgb(255, 255, 255);
+}
+
+li {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  margin: 2px;
+}
+
+span {
+  font-size: 1.6em;
+  border: 1px solid rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 14px;
+  margin: 20px;
+  color: rgb(255, 255, 255);
+  display: block;
+  cursor: pointer;
+}
+
+.warning {
+  color: #EC407A;
+  border-color: #EC407A;
+  animation: warning 1s ease-in-out infinite;
+}
+
+@keyframes warning {
+  0% { transform: scale(1)}
+  50% { transform: scale(0.8)}
+  100% { transform: scale(1)}
+}
+
+
+@media (min-width: 320px) {
+  li {
+    height: 110px;
+    width: 80px;
+  }
+}
+
+@media (min-width: 375px) {
+  li {
+    height: 160px;
+    width: 100px;
+  }
+}
+
+@media (min-width: 425px) {
+  li {
+    height: 140px;
+    width: 110px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  li {
+    height: 210px;
+    width: 170px;
+  }
+}
+
+@media (min-width: 768px) {
+  li {
+    height: 210px;
+    width: 170px;
+  }
+}
+
+@media (min-width: 1024px) {
+  li {
+    height: 200px;
+    width: 200px;
+  }
+}
