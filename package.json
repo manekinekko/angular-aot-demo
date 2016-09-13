@@ -1,6 +1,6 @@
 {
   "name": "angular2-aot-demo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular 2 AOT (Ahead Of Time) offline compilation example with Webpack",
   "scripts": {
     "ngc": "ngc -p ./tsconfig.aot.json",
@@ -10,7 +10,7 @@
     "start-aot": "npm run ngc && npm run webpack-aot && webpack-dev-server --config webpack.aot.config.js --port 4202",
     "build-jit": "npm run webpack-jit",
     "build-aot": "npm run ngc && npm run webpack-aot",
-    "demo": "rm -fr ./dist && npm run build-jit && npm run build-aot"
+    "demo": "rimraf ./dist && npm run build-jit && npm run build-aot"
   },
   "keywords": [
     "angular2",
@@ -42,6 +42,7 @@
     "http-server": "^0.9.0",
     "raw-loader": "^0.5.1",
     "reflect-metadata": "^0.1.8",
+    "rimraf": "^2.5.4",
     "rxjs": "^5.0.0-beta.11",
     "ts-loader": "^0.8.2",
     "typescript": "^2.0.2",
