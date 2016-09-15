@@ -2,6 +2,10 @@
 
 This repository shows how to use the Angular 2 (RC6) command line offline compiler (ngc) with Webpack and TypeScript.
 
+## Presentation
+
+[Demystifying Ahead-Of-Time Compilation In Angular 2](http://slides.com/wassimchegham/demystifying-ahead-of-time-compilation-in-angular-2-aot-jit).
+
 # How to
 
 ## Build a JIT bundle
