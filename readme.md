@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/manekinekko/angular2-aot-demo/tree/master.svg?style=svg)](https://circleci.com/gh/manekinekko/angular2-aot-demo/tree/master)
+
 # Angular 2 AOT (Ahead Of Time) offline compilation example with Webpack and TypeScript
 
 This repository shows how to use the Angular 2 final command line offline compiler (ngc) with Webpack and TypeScript.
